@@ -8,8 +8,15 @@ const skills = {
 
 const bubbleVariants = {
   initial: { scale: 1 },
-  expanded: { scale: 1.2, transition: { type: "spring", stiffness: 300 } },
+  expanded: {
+    scale: 1.2,
+    transition: {
+      type: "spring" as const, // ✅ force TS to treat as valid
+      stiffness: 300,
+    },
+  },
 };
+
 
 export default function InteractiveSkillMap() {
   const [active, setActive] = useState<"ai" | "software" | null>(null);

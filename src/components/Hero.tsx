@@ -45,11 +45,12 @@ export default function Hero() {
       {/* 📸 Hero Image */}
       <div className="mt-10 md:mt-0 md:w-1/3 z-10">
         <img
-          src="/assets/profile.jpeg"
+          src="/personal-portfolio/assets/profile2.jpeg"
           alt="A R"
           className="w-48 h-48 rounded-full object-cover border-4 border-purple-500 mx-auto shadow-lg"
         />
       </div>
+      
       {/* 🔤 Hero Content */}
       <h1 className="text-5xl sm:text-6xl font-bold mb-6 leading-tight">
         Hi, I’m <span className="text-purple-500">Rajshekar</span>

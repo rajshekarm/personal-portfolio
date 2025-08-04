@@ -16,7 +16,7 @@ export default function About() {
           viewport={{ once: true, amount: 0.5 }}
         >
           <img
-            src="/assets/Raj1.jpg"
+            src="/personal-portfolio/assets/Raj1.jpg"
             alt="A R"
             className="w-64 h-64 rounded-2xl object-cover border-4 border-purple-500 shadow-xl"
           />
