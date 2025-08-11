@@ -37,10 +37,12 @@ export default function About() {
 
           <p className="text-lg sm:text-xl leading-relaxed text-gray-300">
             I'm an AI Developer and Software Engineer with a passion for building intelligent systems.
-            My work spans deep learning, LLMs, and creating elegant backend architecture that powers real-world applications.
+My work spans designing scalable backend architecture, building robust software systems, and applying deep learning and LLMs to real-world applications.
+
           </p>
 
           <p className="mt-6 text-lg sm:text-xl leading-relaxed text-gray-300">
+            
             I enjoy turning complex problems into clean, scalable solutions — whether that’s through building full-stack apps,
             developing generative AI features, or optimizing infrastructure for performance.
           </p>

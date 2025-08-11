@@ -53,11 +53,16 @@ export default function Hero() {
       
       {/* 🔤 Hero Content */}
       <h1 className="text-5xl sm:text-6xl font-bold mb-6 leading-tight">
-        Hi, I’m <span className="text-purple-500">Rajshekar</span>
+        Hi, I’m <span className="text-purple-500">Rajshekar </span>
       </h1>
-
+      <p>
+        I’m a passionate <span className="text-purple-500">Software Engineer</span> and <span className="text-purple-500">AI Enthusiast</span> focused on building intelligent systems.
+      </p>
+      <p>
+        I specialize in <span className="text-purple-500">AI/ML</span> and <span className="text-purple-500">Full Stack Development</span>, creating solutions that are both innovative and impactful.
+      </p>
       <p className="text-xl sm:text-2xl max-w-2xl text-gray-300 mb-8">
-        AI Developer & Creative Software Engineer building intelligent systems with deep learning, LLMs, and elegant backend architecture.
+        I enjoy creating software systems that scale well, are easy to maintain, and grow smarter with AI.
       </p>
 
       <a

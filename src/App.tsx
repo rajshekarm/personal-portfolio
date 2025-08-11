@@ -15,7 +15,7 @@ import OrbitalSkills from './components/ObitalSkills'
 import { useState } from 'react';
 
 function App() {
-  
+   
   const [showSplash, setShowSplash] = useState(true);
 
   return (
@@ -30,7 +30,8 @@ function App() {
             <Hero />
             <About />
             <OrbitalSkills />
-            <InteractiveSkillMap />
+
+            {/* <InteractiveSkillMap /> */}
             <Skills />
             <Projects />
           </>
