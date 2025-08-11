@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
+    <>
+    
     <section
       id="about"
       className="min-h-screen flex items-center justify-center bg-black text-white px-6 py-20 border-b border-zinc-800"
@@ -37,7 +39,7 @@ export default function About() {
 
           <p className="text-lg sm:text-xl leading-relaxed text-gray-300">
             I'm an AI Developer and Software Engineer with a passion for building intelligent systems.
-My work spans designing scalable backend architecture, building robust software systems, and applying deep learning and LLMs to real-world applications.
+            My work spans designing scalable backend architecture, building robust software systems, and applying deep learning and LLMs to real-world applications.
 
           </p>
 
@@ -53,6 +55,37 @@ My work spans designing scalable backend architecture, building robust software 
           </p>
         </motion.div>
       </div>
+
+
+      
     </section>
+
+        <section className="bg-black text-white px-6 py-20 border-b border-zinc-800">
+            <div className="max-w-4xl mx-auto text-left">
+              <h2 className="text-3xl font-bold mb-6 text-purple-500">What I Bring to the Table</h2>
+              <ul className="list-disc pl-6 text-gray-300 space-y-4 text-lg">
+                <li>
+                  Strong C#/.NET Core development expertise with a focus on object-oriented programming, design patterns, and performance optimization.
+                </li>
+                <li>
+                  Proven success in building high-throughput, low-latency financial systems that meet strict regulatory and security requirements.
+                </li>
+                <li>
+                  Experienced in AWS cloud services, enabling scalable, fault-tolerant application deployments.
+                </li>
+                <li>
+                  Solid foundation in algorithms, statistics, and data structures, applied to problem-solving in real-world financial and AI-driven systems.
+                </li>
+                <li>
+                  Effective collaborator in cross-functional teams, with strong communication skills and a continuous learning mindset.
+                </li>
+              </ul>
+            </div>
+          </section>
+          
+
+              
+    </>
+
   );
 }

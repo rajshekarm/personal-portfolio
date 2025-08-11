@@ -10,7 +10,7 @@ import { ThemeProvider } from './components/ThemeProvider'
 import About from './components/About'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
-import InteractiveSkillMap from './components/InteractiveSkillMap'
+// import InteractiveSkillMap from './components/InteractiveSkillMap'
 import OrbitalSkills from './components/ObitalSkills'
 import { useState } from 'react';
 
