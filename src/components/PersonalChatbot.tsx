@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 export type ChatLinkMap = { github?: string; linkedin?: string; email?: string; website?: string };
 export type ChatProject = { title: string; blurb?: string; url?: string };

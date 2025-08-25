@@ -15,7 +15,7 @@ const projects = [
     description:
       "A real-time fitness app using MediaPipe and TensorFlow.js to detect pushups and store user stats with Supabase.",
     stack: ["Next.js", "TailwindCSS", "MediaPipe", "Supabase"],
-    github: "https://github.com/your-username/pushup-ai",
+    github: "https://github.com/rajshekarm/pushup-detection",
     demo: "",
   },
   {
@@ -23,7 +23,7 @@ const projects = [
     description:
       "An interactive chatbot built using OpenAI's API that answers questions about my portfolio, projects, and resume contextually.",
     stack: ["React", "OpenAI API", "LangChain", "Vercel"],
-    github: "https://github.com/your-username/portfolio-chatbot",
+    github: "https://github.com/your-username/portfolio-chatbothttps://github.com/rajshekarm/personal-portfolio/blob/main/src/components/PersonalChatbot.tsx",
     demo: "",
   },
 ];
