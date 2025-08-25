@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { FaAws } from "react-icons/fa";
 import { FaHandshake } from "react-icons/fa";
-import { SiAmazon } from "react-icons/si";
+// import { SiAmazon } from "react-icons/si";
 import { SiDotnet } from "react-icons/si";
-import { MdSpeed, MdOutlineSecurity } from "react-icons/md";
+import { MdSpeed } from "react-icons/md";
 import { GiBrain } from "react-icons/gi";
 
 

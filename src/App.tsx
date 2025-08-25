@@ -13,6 +13,8 @@ import Projects from './components/Projects'
 // import InteractiveSkillMap from './components/InteractiveSkillMap'
 import OrbitalSkills from './components/ObitalSkills'
 import { useState } from 'react';
+import AIAkills from './components/AISkills';
+import PersonalChatbot from './components/PersonalChatbot';
 
 function App() {
    
@@ -33,7 +35,18 @@ function App() {
 
             {/* <InteractiveSkillMap /> */}
             <Skills />
+            <AIAkills />
             <Projects />
+            <PersonalChatbot
+                  name="Rajashekar"
+                  storageKey={`recruiter-chatbot-${'rajashekar'}`}
+                  role="AI / Software Engineer"
+                  resumeUrl="/Rajashekar_Resume.pdf"
+                  links={{ github: "...", linkedin: "...", email: "mailto:..." }}
+                  projects={[{ title: "Flatmates (Chores AI)" }, { title: "EMS Trading Systems" }]}
+                  skills={["React","TypeScript","Kafka","AI/ML","Spring"]}
+                  education={["M.S. CS (AI), Illinois Tech, 2025"]}
+                />
           </>
         )}
       </div>
