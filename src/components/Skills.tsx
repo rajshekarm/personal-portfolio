@@ -1,97 +1,61 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import type { Variants } from "framer-motion";
 
-const containerVariants: Variants = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.15, // Slightly faster stagger
-      delayChildren: 0.1,    // Optional delay before first child animates
-    },
-  },
+const skillMap = {
+  ai: ["Deep Learning", "LLMs", "PyTorch", "Computer Vision", "Generative AI", "TensorFlow"],
+  software: ["React", "Node.js", "PostgreSQL", "Docker", "Kafka", "TypeScript"],
 };
 
-const itemVariants: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 30,
-  },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.4,
-      ease: [0.25, 0.1, 0.25, 1], // Custom ease
-    },
-  },
-};
+const orbitRadius = 120;
+
+function getOrbitPosition(index: number, total: number) {
+  const angle = (index / total) * 2 * Math.PI;
+  const x = orbitRadius * Math.cos(angle);
+  const y = orbitRadius * Math.sin(angle);
+  return { x, y };
+}
+
 export default function Skills() {
-  return (
-    <section
-      id="skills"
-      className="min-h-screen flex flex-col items-center justify-center bg-black text-white px-6 py-20"
-    >
-      <div className="max-w-6xl w-full text-center">
-        <h2 className="text-4xl font-bold mb-12 text-purple-500">Skills</h2>
+  const [active, setActive] = useState<"ai" | "software" | null>(null);
 
-        <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          {[
-            {
-              title: "AI & ML",
-              items: [
-                "Deep Learning (CNNs, RNNs)",
-                "Transformers & LLMs",
-                "PyTorch, TensorFlow",
-                "Computer Vision",
-                "Generative AI",
-              ],
-            },
-            {
-              title: "Frontend",
-              items: ["React", "Next.js", "TypeScript", "TailwindCSS", "Framer Motion"],
-            },
-            {
-              title: "Backend",
-              items: ["Node.js", "gRPC", "Kafka", "PostgreSQL", "Supabase"],
-            },
-            {
-              title: "Tools & DevOps",
-              items: ["Git", "Docker", "VS Code", "Postman"],
-            },
-            {
-              title: "Other Skills",
-              items: [
-                "Content Creation",
-                "YouTube SEO",
-                "Research Writing",
-                "Team Collaboration",
-              ],
-            },
-          ].map((group) => (
+  return (
+    <section className="min-h-screen flex flex-col items-center justify-center bg-black text-white px-6 py-20">
+      <h2 className="text-4xl font-bold text-purple-500 mb-16">Skills</h2>
+
+      <div className="relative flex flex-wrap justify-center gap-16">
+        {(["ai", "software"] as const).map((type) => (
+          <div key={type} className="relative w-40 h-40">
+            {/* Main Bubble */}
             <motion.div
-              key={group.title}
-              variants={itemVariants}
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className="bg-zinc-900 rounded-xl p-6 shadow-md hover:shadow-xl border border-zinc-700"
+              onClick={() => setActive(active === type ? null : type)}
+              className="w-40 h-40 rounded-full bg-purple-600 flex items-center justify-center cursor-pointer shadow-lg text-center font-semibold"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
             >
-              <h3 className="text-2xl font-semibold mb-4 text-purple-400">
-                {group.title}
-              </h3>
-              <ul className="space-y-2 list-disc list-inside text-white text-left">
-                {group.items.map((skill) => (
-                  <li key={skill}>{skill}</li>
-                ))}
-              </ul>
+              {type === "ai" ? "AI Engineer" : "Software Engineer"}
             </motion.div>
-          ))}
-        </motion.div>
+
+            {/* Orbiting Subskills */}
+            {active === type &&
+              skillMap[type].map((skill, index) => {
+                const { x, y } = getOrbitPosition(index, skillMap[type].length);
+                return (
+                  <motion.div
+                    key={skill}
+                    initial={{ x: 0, y: 0, opacity: 0 }}
+                    animate={{ x, y, opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.05 }}
+                    className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                  >
+                    <div className="bg-zinc-800 border border-purple-400 text-white px-4 py-2 rounded-full text-sm shadow-sm whitespace-nowrap">
+                      {skill}
+                    </div>
+                  </motion.div>
+                );
+              })}
+          </div>
+        ))}
       </div>
     </section>
   );

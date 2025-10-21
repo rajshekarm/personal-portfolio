@@ -8,10 +8,10 @@ import Hero from './components/Hero'
 import { ThemeProvider } from './components/ThemeProvider'
 
 import About from './components/About'
-import Skills from './components/Skills'
+import Skills from './components/SkillsOld'
 import Projects from './components/Projects'
 // import InteractiveSkillMap from './components/InteractiveSkillMap'
-import OrbitalSkills from './components/ObitalSkills'
+import OrbitalSkills from './components/Skills'
 import { useState } from 'react';
 import AIAkills from './components/AISkills';
 import PersonalChatbot from './components/PersonalChatbot';
@@ -30,12 +30,12 @@ function App() {
           <>
             <Navbar />
             <Hero />
-            <About />
-            <OrbitalSkills />
+            {/* <About /> */}
+            {/* <OrbitalSkills /> */}
 
             {/* <InteractiveSkillMap /> */}
             <Skills />
-            <AIAkills />
+            {/* <AIAkills /> */} 
             <Projects />
             <PersonalChatbot
                   name="Rajashekar"
