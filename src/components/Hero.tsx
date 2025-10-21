@@ -68,7 +68,7 @@ export default function Hero() {
             <FaEnvelope className="text-[#D1D5DB]" /> rmudigonda@hawk.illinoistech.edu
           </a>
           <a
-            href="https://github.com/rajshekar-m"
+            href="https://github.com/rajshekarm"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 hover:text-[#E5E7EB] transition-colors"
