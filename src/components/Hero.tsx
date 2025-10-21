@@ -73,7 +73,7 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="flex items-center gap-2 hover:text-[#E5E7EB] transition-colors"
           >
-            <FaGithub className="text-[#D1D5DB]" /> github.com/rajshekar-m
+            <FaGithub className="text-[#D1D5DB]" /> github.com/rajshekarm
           </a>
         </div>
       </div>
