@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ChevronRight, Database, Server, Cpu, ExternalLink } from "lucide-react";
+import { ChevronRight, Server, ExternalLink } from "lucide-react";
 
 const projects = [
   {
