@@ -1,77 +1,66 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
+import { Server, Brain, Layout, Zap, Database, Globe } from "lucide-react";
 
-const skills = {
-  ai: ["Deep Learning", "LLMs", "PyTorch", "Computer Vision", "Generative AI"],
-  software: ["React", "Node.js", "TypeScript", "PostgreSQL", "Docker"],
-};
-
-const bubbleVariants = {
-  initial: { scale: 1 },
-  expanded: {
-    scale: 1.2,
-    transition: {
-      type: "spring" as const, // ✅ force TS to treat as valid
-      stiffness: 300,
-    },
-  },
-};
-
-
-export default function InteractiveSkillMap() {
-  const [active, setActive] = useState<"ai" | "software" | null>(null);
-
+export const  SkillsMap = () => {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center bg-black text-white px-6 py-20">
-      <h2 className="text-4xl font-bold text-purple-500 mb-12">Skills</h2>
+    <section id="skills" className="py-20 px-6 bg-[#050505]">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl font-bold text-white mb-12 flex items-center gap-3">
+          <Zap className="text-yellow-500" /> Technical Ecosystem
+        </h2>
 
-      <div className="flex flex-wrap justify-center gap-12">
-        {/* AI Engineer Bubble */}
-        <motion.div
-          className="w-40 h-40 bg-purple-600 rounded-full flex items-center justify-center cursor-pointer text-center font-semibold shadow-lg"
-          variants={bubbleVariants}
-          animate={active === "ai" ? "expanded" : "initial"}
-          onClick={() => setActive(active === "ai" ? null : "ai")}
-        >
-          AI Engineer
-        </motion.div>
+        <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4">
+          
+          {/* 1. PRIMARY: Backend & Distributed Systems (Large Card) */}
+          <div className="md:col-span-2 md:row-span-2 p-8 rounded-3xl bg-zinc-900/40 border border-zinc-800 hover:border-blue-500/50 transition-all group">
+            <Server className="text-blue-500 mb-6" size={40} />
+            <h3 className="text-2xl font-bold text-white mb-3">Backend Architecture</h3>
+            <p className="text-zinc-400 text-sm mb-6 leading-relaxed">
+              Specializing in high-throughput microservices, CQRS patterns, and scalable systems using C# and .NET.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {["C# / .NET", "CQRS", "gRPC", "Kafka", "SQL Server", "EF Core", "Distributed Systems"].map((s) => (
+                <span key={s} className="px-3 py-1 bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-mono rounded-full uppercase tracking-wider">
+                  {s}
+                </span>
+              ))}
+            </div>
+          </div>
 
-        {/* Software Engineer Bubble */}
-        <motion.div
-          className="w-40 h-40 bg-purple-600 rounded-full flex items-center justify-center cursor-pointer text-center font-semibold shadow-lg"
-          variants={bubbleVariants}
-          animate={active === "software" ? "expanded" : "initial"}
-          onClick={() => setActive(active === "software" ? null : "software")}
-        >
-          Software Engineer
-        </motion.div>
+          {/* 2. SECONDARY: AI & Machine Learning Innovation */}
+          <div className="md:col-span-2 p-8 rounded-3xl bg-zinc-900/40 border border-zinc-800 hover:border-purple-500/50 transition-all">
+            <div className="flex items-center gap-3 mb-4">
+              <Brain className="text-purple-500" size={32} />
+              <h3 className="text-xl font-bold text-white">AI Engineering</h3>
+            </div>
+            <p className="text-zinc-400 text-sm mb-4">
+              Building multimodal pipelines and fine-tuning LLMs for production-grade intelligence.
+            </p>
+            <div className="flex flex-wrap gap-2 text-[10px] font-mono">
+              <span className="text-purple-400 border border-purple-500/30 px-2 py-0.5 rounded">RAG</span>
+              <span className="text-purple-400 border border-purple-500/30 px-2 py-0.5 rounded">Gemini/Nano</span>
+              <span className="text-purple-400 border border-purple-500/30 px-2 py-0.5 rounded">Diffusion Models</span>
+              <span className="text-purple-400 border border-purple-500/30 px-2 py-0.5 rounded">CLIP</span>
+              <span className="text-purple-400 border border-purple-500/30 px-2 py-0.5 rounded">U-Net</span>
+            </div>
+          </div>
+
+          {/* 3. Full-Stack / Interface Engineering */}
+          <div className="md:col-span-1 p-6 rounded-3xl bg-zinc-900/40 border border-zinc-800 hover:border-emerald-500/50 transition-all">
+            <Layout className="text-emerald-500 mb-4" size={24} />
+            <h4 className="font-bold text-white mb-2">Full-Stack</h4>
+            <p className="text-zinc-500 text-xs">React & TypeScript for high-performance dashboards and NLP trading blotters.</p>
+          </div>
+
+          {/* 4. Infrastructure & Cloud Mastery */}
+          <div className="md:col-span-1 p-6 rounded-3xl bg-zinc-900/40 border border-zinc-800 hover:border-orange-500/50 transition-all">
+            <Database className="text-orange-500 mb-4" size={24} />
+            <h4 className="font-bold text-white mb-2">Infrastructure</h4>
+            <p className="text-zinc-500 text-xs">Architecting with Docker, Kubernetes, and Azure for 99.9% availability.</p>
+          </div>
+
+        </div>
       </div>
-
-      {/* Exploding Skills */}
-      <AnimatePresence>
-        {active && (
-          <motion.div
-            key={active}
-            initial={{ opacity: 0, scale: 0.7 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.7 }}
-            transition={{ duration: 0.4 }}
-            className="flex flex-wrap justify-center gap-4 mt-10"
-          >
-            {skills[active].map((skill) => (
-              <motion.div
-                key={skill}
-                className="bg-zinc-800 text-white px-4 py-2 rounded-full border border-purple-400 shadow-sm"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                {skill}
-              </motion.div>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
     </section>
   );
-}
+};

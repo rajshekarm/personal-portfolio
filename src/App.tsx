@@ -3,18 +3,15 @@ import './App.css'
 import SplashScreen from "./components/SplashScreen";
 
 import Navbar from './components/Navbar'
-
-import Hero from './components/Hero'
 import { ThemeProvider } from './components/ThemeProvider'
 
-// import About from './components/About'
-import Skills from './components/SkillsOld'
-import Projects from './components/Projects'
-// import InteractiveSkillMap from './components/InteractiveSkillMap'
-// import OrbitalSkills from './components/Skills'
 import { useState } from 'react';
-// import AIAkills from './components/AISkills';
 import PersonalChatbot from './components/PersonalChatbot';
+import { SkillsMap } from './components/InteractiveSkillMap';
+import { ProjectShowcase } from './components/Projects';
+import { About } from './components/About';
+import { Home } from './components/Home';
+;
 
 function App() {
    
@@ -29,15 +26,12 @@ function App() {
         ) : (
           <>
             <Navbar />
-            <Hero />
-            {/* <About /> */}
-            {/* <OrbitalSkills /> */}
-
-            {/* <InteractiveSkillMap /> */}
-            <Skills />
-            {/* <AIAkills /> */} 
-            <Projects />
-            <PersonalChatbot
+            <Home />
+            <About />
+            <SkillsMap />
+            <ProjectShowcase />
+            <div className="fixed bottom-6 right-6 z-50">
+              <PersonalChatbot
                   name="Rajashekar"
                   storageKey={`recruiter-chatbot-${'rajashekar'}`}
                   role="AI / Software Engineer"
@@ -47,6 +41,7 @@ function App() {
                   skills={["React","TypeScript","Kafka","AI/ML","Spring"]}
                   education={["M.S. CS (AI), Illinois Tech, 2025"]}
                 />
+            </div>
           </>
         )}
       </div>

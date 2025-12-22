@@ -1,97 +1,69 @@
 import { motion } from "framer-motion";
-import { FaAws, FaHandshake } from "react-icons/fa";
-import { SiDotnet } from "react-icons/si";
-import { MdSpeed } from "react-icons/md";
-import { GiBrain } from "react-icons/gi";
+import { ShieldCheck, Zap, Scale, Code2 } from "lucide-react";
 
-export default function About() {
+export const About = () => {
   return (
-    <>
-      {/* 🧑‍💻 About Section */}
-      <section
-        id="about"
-        className="min-h-screen flex items-center justify-center bg-black text-white px-6 py-20 border-b border-[#1F2428]"
-      >
-        <div className="max-w-6xl flex flex-col md:flex-row items-center md:items-start gap-12">
-          {/* 📸 Animated Profile Image */}
-          <motion.div
-            className="md:w-1/3 w-full flex justify-center"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
-            viewport={{ once: true, amount: 0.5 }}
-          >
-            <img
-              src="/personal-portfolio/assets/Raj1.jpg"
-              alt="Rajshekar"
-              className="w-64 h-64 rounded-2xl object-cover border-4 border-[#D1D5DB] shadow-xl"
-            />
-          </motion.div>
+    <section id="about" className="py-24 px-6 bg-[#050505] text-white">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        
+        {/* Left: The Professional Story */}
+        <motion.div 
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          className="space-y-6"
+        >
+          <h2 className="text-4xl font-bold tracking-tighter italic border-l-4 border-blue-600 pl-4">
+            The Mission
+          </h2>
+          <p className="text-zinc-400 leading-relaxed">
+            I am a **Senior Backend Engineer** and **AI Architect** based in Chicago, specializing in the intersection of high-scale infrastructure and machine intelligence. My career has been defined by a focus on precision—whether analyzing the structural mechanics of beams or architecting distributed trading systems.
+          </p>
+          <p className="text-zinc-400 leading-relaxed">
+            At **SS&C Eze**, I engineered distributed microservices that handled critical trading workflows with low latency. Today, at **Fashion AI**, I am building the backend infrastructure that powers multimodal AI pipelines, integrating LLMs and Diffusion models into production systems.
+          </p>
+          <p className="text-zinc-400 leading-relaxed">
+            Currently, I am the founding force behind **Kshanax AI**, where I apply **Clean Architecture** to build next-generation investment management technology. I hold an M.S. in Computer Science (AI focus) from the **Illinois Institute of Technology**.
+          </p>
+        </motion.div>
 
-          {/* 🧠 Animated Story Card */}
-          <motion.div
-            className="md:w-2/3 w-full text-center md:text-left bg-[#0F1115] border border-[#1F2428] rounded-xl shadow-lg p-8"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
-            viewport={{ once: true, amount: 0.5 }}
-          >
-            <h2 className="text-4xl font-bold mb-6 text-[#D1D5DB]">
-              About Me
-            </h2>
-
-            <p className="text-lg sm:text-xl leading-relaxed text-[#B0B8C1]">
-              I'm an <span className="text-[#E5E7EB] font-medium">AI Developer</span> and{" "}
-              <span className="text-[#E5E7EB] font-medium">Software Engineer</span> with a passion for building intelligent systems.
-              My work spans designing scalable backend architectures, building robust software systems, and applying deep learning and LLMs to real-world applications.
-            </p>
-
-            <p className="mt-6 text-lg sm:text-xl leading-relaxed text-[#B0B8C1]">
-              I enjoy turning complex problems into clean, scalable solutions — whether that’s through building full-stack apps,
-              developing generative AI features, or optimizing infrastructure for performance.
-            </p>
-
-            <p className="mt-6 text-lg sm:text-xl leading-relaxed text-[#8A939C]">
-              When I'm not coding, you'll find me exploring the latest in transformer models,
-              creating content for my YouTube channel, or working on robotics and consumer-tech projects that excite me.
-            </p>
-          </motion.div>
+        {/* Right: Engineering Principles (Senior Differentiator) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <PrincipleCard 
+            icon={<Scale className="text-blue-500" />} 
+            title="Scalability" 
+            desc="Designing systems that grow gracefully under high concurrency and data volume." 
+          />
+          <PrincipleCard 
+            icon={<ShieldCheck className="text-emerald-500" />} 
+            title="Reliability" 
+            desc="Prioritizing data integrity and system uptime through Clean Architecture." 
+          />
+          <PrincipleCard 
+            icon={<Zap className="text-purple-500" />} 
+            title="AI Integration" 
+            desc="Moving AI from research to production with optimized multimodal pipelines." 
+          />
+          <PrincipleCard 
+            icon={<Code2 className="text-orange-500" />} 
+            title="Maintainability" 
+            desc="Writing decoupled, testable code that teams can scale and evolve." 
+          />
         </div>
-      </section>
-
-      {/* ⚙️ Key Strengths Section */}
-      <section className="bg-black text-white px-6 py-20 border-b border-[#1F2428]">
-        <div className="max-w-4xl mx-auto text-left">
-          <h2 className="text-3xl font-bold mb-6 text-[#D1D5DB]">Key Strengths</h2>
-
-          <ul className="space-y-6 text-lg">
-            <li className="flex items-start gap-3 text-[#B0B8C1]">
-              <span className="text-[#D1D5DB] text-xl pt-1"><SiDotnet /></span>
-              Strong C#/.NET Core development expertise with a focus on object-oriented programming, design patterns, and performance optimization.
-            </li>
-
-            <li className="flex items-start gap-3 text-[#B0B8C1]">
-              <span className="text-[#D1D5DB] text-xl pt-1"><MdSpeed /></span>
-              Proven success in building high-throughput, low-latency financial systems that meet strict regulatory and security requirements.
-            </li>
-
-            <li className="flex items-start gap-3 text-[#B0B8C1]">
-              <span className="text-[#D1D5DB] text-xl pt-1"><FaAws /></span>
-              Experienced in AWS cloud services, enabling scalable, fault-tolerant application deployments.
-            </li>
-
-            <li className="flex items-start gap-3 text-[#B0B8C1]">
-              <span className="text-[#D1D5DB] text-xl pt-1"><GiBrain /></span>
-              Solid foundation in algorithms, statistics, and data structures, applied to problem-solving in real-world financial and AI-driven systems.
-            </li>
-
-            <li className="flex items-start gap-3 text-[#B0B8C1]">
-              <span className="text-[#D1D5DB] text-xl pt-1"><FaHandshake /></span>
-              Effective collaborator in cross-functional teams, with strong communication skills and a continuous learning mindset.
-            </li>
-          </ul>
-        </div>
-      </section>
-    </>
+      </div>
+    </section>
+  );
+};
+interface PillarProps {
+  icon: React.ReactNode; // ReactNode allows any valid React element (icons, strings, etc.)
+  title: string;
+  desc: string;
+}
+function PrincipleCard({ icon, title, desc }: PillarProps) {
+  return (
+    <div className="p-6 rounded-2xl bg-zinc-900/30 border border-zinc-800 hover:border-zinc-700 transition-all">
+      <div className="mb-4">{icon}</div>
+      <h4 className="text-white font-bold mb-2 uppercase text-xs tracking-widest">{title}</h4>
+      <p className="text-zinc-500 text-xs leading-relaxed">{desc}</p>
+    </div>
   );
 }
