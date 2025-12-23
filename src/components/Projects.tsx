@@ -8,7 +8,7 @@ const projects = [
     desc: "Redesigned critical trading workflows by implementing a distributed microservices architecture. Optimized data consistency across high-concurrency systems.",
     tech: ["C#", ".NET Core", "gRPC", "Kafka", "SQL Server"],
     architecture: "Event-Driven Microservices with CQRS for low-latency trade execution.",
-    link: "#"
+    link: "https://www.ezesoft.com/solutions/eze-eclipse-overview"
   },
   {
     title: "Multimodal AI Platform",
@@ -16,7 +16,7 @@ const projects = [
     desc: "Built backend infrastructure for an AI-driven platform, integrating LLMs and Diffusion-based multimodal pipelines into production systems.",
     tech: ["Python", "PyTorch", "CLIP", "Diffusion", "FastAPI"],
     architecture: "Asynchronous GPU task queue for real-time generative image processing.",
-    link: "#"
+    link: "https://www.faishion.ai/"
   },
   {
     title: "Kshanax AI - Investment Tech",
@@ -24,7 +24,7 @@ const projects = [
     desc: "Architecting a high-performance investment management platform using Clean Architecture to bridge complex financial data with AI insights.",
     tech: ["React", ".NET", "PostgreSQL", "OpenAI API"],
     architecture: "Domain-Driven Design (DDD) with a focus on data integrity and modularity.",
-    link: "#"
+    link: "https://kshana-x-ui.vercel.app/"
   }
 ];
 

@@ -5,7 +5,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const { theme, toggleTheme } = useContext(ThemeContext)!;
 
-  const navLinks = ["Home", "About","Projects", "Skills", ];
+  const navLinks = ["Home", "About", "Experience", "Projects", "Skills", ];
 
   return (
     <nav
@@ -41,7 +41,7 @@ export default function Navbar() {
             onClick={toggleTheme}
             className="text-xl text-[#B0B8C1] hover:text-[#E5E7EB] transition-colors duration-300"
           >
-            {theme === "dark" ? "🌙" : "☀️"}
+            {theme === "dark" ? "" : ""}
           </button>
 
           {/* 📱 Mobile Hamburger */}

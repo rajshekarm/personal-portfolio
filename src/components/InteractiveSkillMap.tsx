@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import { Server, Brain, Layout, Zap, Database, Globe } from "lucide-react";
+
+import { Server, Brain, Layout, Zap, Database } from "lucide-react";
 
 export const  SkillsMap = () => {
   return (

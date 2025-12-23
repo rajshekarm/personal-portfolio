@@ -13,9 +13,9 @@ import Particles from "react-tsparticles";
 export const Home = () => {
   // TODO: Replace these with your real URLs
   const socials = {
-    linkedin: "#",
-    github: "#",
-    email: "mailto:you@example.com",
+    linkedin: "https://www.linkedin.com/in/rajshekarmudigonda/",
+    github: "https://github.com/rajshekarm",
+    email: "mailto:rashekarmudigonda@gmail.com",
   };
 
   return (
@@ -56,7 +56,7 @@ export const Home = () => {
             <p className="text-zinc-400 text-sm max-w-xs">
   Mid-level software engineer focused on performance, reliability, and delivery.
   <br />
-  Experience across backend systems, distributed architecture, and full-stack GenAI.
+  Experience across backend systems, distributed architecture, and full-stack developement.
 </p>
           </div>
 
@@ -98,13 +98,15 @@ export const Home = () => {
         >
           <div className="max-w-3xl">
             <h1 className="text-2xl md:text-4xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-white to-zinc-500">
-              Backend Engineering for Scale.
+              Backend Engineering in .NET. 
               <br />
+              AI Workflows in Python.
+              <br /> 
               Intelligence, Built for Production.
             </h1>
 
             <p className="mt-4 text-lg text-zinc-400 max-w-2xl">
-              I design distributed backends and integrate AI/ML into product workflows <br />shipping measurable outcomes.
+              I build scalable, production-grade APIs and distributed systems with .NET (C#) and use Python to deliver AI features (multimodal understanding, RAG, automation) when they drive measurable product value.
             </p>
           </div>
 
@@ -112,17 +114,17 @@ export const Home = () => {
             <Pillar
               icon={<FaCode className="text-blue-500" />}
               title="Backend"
-              desc="Distributed systems, microservices, ggRPC/REST APIs, async messaging (RabbitMQ), caching, and performance-minded design."
+              desc="C#/.NET backend engineering: clean APIs, gRPC/REST APIs, microservices, async workflows, SQL, Database tuninng, caching, and performance tuning built for reliability and scale."
             />
             <Pillar
               icon={<FaBrain className="text-purple-500" />}
               title="GenAI Systems"
-              desc="LLM integration (OpenAI, Gemini), multimodal pipelines, RAG services, tool calling, orchestration, and evaluation—built with reliability, monitoring, and scalability."
+              desc="LLM integration (OpenAI, Gemini), multimodal pipelines, RAG services, tool calling, orchestration, and evaluation, built with reliability, monitoring, and scalability."
             />
             <Pillar
               icon={<FaLayerGroup className="text-emerald-500" />}
               title="Full Stack"
-              desc="React + Next.js apps, real-time UX, pragmatic API design, and security fundamentals."
+              desc="React, Angular apps, real-time UX, pragmatic API design, and security fundamentals."
             />
           </div>
 
@@ -131,7 +133,7 @@ export const Home = () => {
               href="#projects"
               className="px-8 py-3 bg-white text-black font-bold rounded-full hover:bg-blue-500 hover:text-white transition-all"
             >
-              See System Designs
+              View Engineering work
             </a>
             <a
               href="/Rajashekar_Resume.pdf"
