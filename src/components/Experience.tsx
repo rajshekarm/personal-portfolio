@@ -23,7 +23,7 @@ type ExperienceItem = {
 const experience: ExperienceItem[] = [
   {
     company: "Faishion AI (Virtual Try-On Platform)",
-    title: "Software Engineer (.NET Backend) • Python for AI",
+    title: "Backend Developer | Python for AI | Full Stack with React & FastAPI",
     dates: "2025 — Present",
     location: "Chicago, IL (Hybrid/Remote)",
     summary:
@@ -56,7 +56,7 @@ const experience: ExperienceItem[] = [
   },
   {
     company: "Kshanax (Investment Management Product)",
-    title: "Software Engineer (.NET) • AI Feature Development (Python)",
+    title: "Software Engineer (.NET for backend Orchestration and Services) | AI Feature Development (Python)",
     dates: "2023 — 2024",
     location: "Chicago, IL",
     summary:
@@ -68,7 +68,7 @@ const experience: ExperienceItem[] = [
     ],
     built: [
       "Domain-driven .NET services and APIs supporting investment workflows and secure integrations.",
-      "Python AI services for workflow automation and intelligent assistance (LLM/RAG if applicable).",
+      "Python AI services for workflow automation and intelligent assistance (LLM/RAG).",
       "Clean interfaces between product backend and AI components to keep behavior testable and maintainable.",
     ],
     tech: [

@@ -21,15 +21,14 @@ export const About = () => {
             </h2>
 
             <p className="text-zinc-400 leading-relaxed max-w-2xl">
-              I’m a <strong className="text-zinc-200">core .NET (C#) backend engineer</strong>{" "}
-              who also builds <strong className="text-zinc-200">production AI workflows in Python</strong>.
-              My sweet spot is the intersection of reliable system design and practical AI — shipping features
-              that are measurable, debuggable, and maintainable.
+              I’m a <strong className="text-zinc-200"> backend engineer</strong>{" "}
+              <strong className="text-zinc-200">who builds APIs and services in .NET(C#) and Python. </strong>
+              I focus on clean boundaries, data correctness, and operational simplicity, so features are easy to ship and easy to support..
             </p>
 
             <p className="text-zinc-400 leading-relaxed max-w-2xl">
-              I care about engineering fundamentals: clear interfaces, correctness under concurrency,
-              predictable performance, and systems that are easy to operate in production.
+
+              When the product needs it, I also deliver end-to-end work: React UI components, integrations, and Python automation/AI workflows with the guardrails to run safely in production.
             </p>
           </div>
         <Link
@@ -46,14 +45,11 @@ export const About = () => {
 
             <ul className="mt-4 space-y-3 text-sm text-zinc-400 list-disc pl-5">
               <li>
-                Start with the metric and constraints (latency, cost, correctness, deadlines) — then design.
-              </li>
+                Start with the SLOs + constraints (latency, throughput, cost, correctness, deadlines) and design around them.              </li>
               <li>
-                Prefer boring, reliable solutions first; introduce AI only when it improves the outcome.
-              </li>
+                Choose the simplest reliable approach first; add complexity (including AI) only when it clearly pays off.              </li>
               <li>
-                Build for production from day one: observability, failure modes, and safe delivery.
-              </li>
+                Build for production from day one: logs/metrics/traces, clear failure modes, and safe rollouts.              </li>
             </ul>
           </div>
 
@@ -67,9 +63,11 @@ export const About = () => {
             </div>
 
             <p className="mt-3 text-sm text-zinc-400 leading-relaxed">
-              Backend / Platform roles in <strong className="text-zinc-200">.NET (C#)</strong> where I can own
-              meaningful systems — and optionally build <strong className="text-zinc-200">Python AI workflows</strong>{" "}
-              that create real product value.
+              Backend / Full Stack roles in <strong className="text-zinc-200">.NET (C#) or Python </strong> 
+              where I can own core services (APIs, integrations, performance, reliability) and contribute 
+               <strong className="text-zinc-200"> full-stack with React and Python</strong>{" "} 
+               when it helps ship complete features.
+      
             </p>
           </div>
         </motion.div>

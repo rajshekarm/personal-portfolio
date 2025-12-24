@@ -5,7 +5,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const { theme, toggleTheme } = useContext(ThemeContext)!;
 
-  const navLinks = ["Home", "About", "Experience", "Projects", "Skills", ];
+  const navLinks = ["Home", "About", "Education", "Experience", "Projects", "Skills", ];
 
   return (
     <nav

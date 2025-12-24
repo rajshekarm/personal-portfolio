@@ -6,6 +6,11 @@ import { Main } from "./pages/Main";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AboutFull } from "./pages/AboutFull";
+import BlogsHome from "./pages/BlogsHome";
+import CaseStudyList from "./pages/CaseStudyList";
+import CaseStudyDetail from "./pages/CaseStudyDetail";
+import ArticleList from "./pages/ArticleList";
+import ArticleDetail from "./pages/ArticleDetail";
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -18,9 +23,16 @@ function App() {
         ) : (
           <BrowserRouter basename="/personal-portfolio">
             <Routes>
-              <Route path="/" element={<Main />} />
-              <Route path="/about" element={<AboutFull />} />
-              
+                <Route path="/" element={<Main />} />
+                <Route path="/about" element={<AboutFull />} />
+
+                <Route path="/blogs" element={<BlogsHome />} />
+
+                <Route path="/blogs/case-studies" element={<CaseStudyList />} />
+                <Route path="/blogs/case-studies/:slug" element={<CaseStudyDetail />} />
+
+                <Route path="/blogs/articles" element={<ArticleList />} />
+                <Route path="/blogs/articles/:slug" element={<ArticleDetail />} />
             </Routes>
           </BrowserRouter>
         )}
