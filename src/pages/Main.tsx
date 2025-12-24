@@ -5,6 +5,7 @@ import { Experience } from "../components/Experience";
 import { SkillsMap } from "../components/InteractiveSkillMap";
 import { ProjectShowcase } from "../components/Projects";
 import PersonalChatbot from "../components/PersonalChatbot";
+import { Education } from "../components/Education";
 
 
 export const Main = () => {
@@ -13,6 +14,7 @@ export const Main = () => {
             <Navbar />
             <Home />
             <About />
+            <Education />
             <Experience/>
             <SkillsMap />
             <ProjectShowcase />

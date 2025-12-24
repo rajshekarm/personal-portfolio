@@ -100,13 +100,13 @@ export const Home = () => {
             <h1 className="text-2xl md:text-4xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-white to-zinc-500">
               Backend Engineering in .NET. 
               <br />
-              AI Workflows in Python.
+              High-performance React UI components.
               <br /> 
-              Intelligence, Built for Production.
+              GenAI workflows in Python.
             </h1>
 
             <p className="mt-4 text-lg text-zinc-400 max-w-2xl">
-              I build scalable, production-grade APIs and distributed systems with .NET (C#) and use Python to deliver AI features (multimodal understanding, RAG, automation) when they drive measurable product value.
+              5+ years delivering .NET APIs and backend systems, modernizing legacy apps, and supporting product UI migrations to modern JavaScript frameworks.
             </p>
           </div>
 

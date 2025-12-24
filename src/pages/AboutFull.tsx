@@ -11,7 +11,7 @@ export const AboutFull = () => {
           </h1>
 
           <Link
-            to="/#about"
+            to="/#home"
             className="text-sm px-4 py-2 rounded-full border border-zinc-700 text-zinc-300 hover:bg-zinc-800 transition"
           >
             ← Back
